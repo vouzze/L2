@@ -7,21 +7,21 @@ namespace L2Z1
         static void Main()
         {
             Program p = new Program();
-            int task;
+            string task;
             do
             {
                 Console.WriteLine("\nWhat task do you need?\nPrint '0' to exit.");
-                task = int.Parse(Console.ReadLine());
+                task = Console.ReadLine();
                 switch (task)
                 {
-                    case 0: break;
-                    case 1: p.first(); break;
-                    case 2: p.second(); break;
-                    case 3: p.third(); break;
-                    case 5: p.fifth(); break;
+                    case "0": break;
+                    case "1": p.first(); break;
+                    case "2": p.second(); break;
+                    case "3": p.third(); break;
+                    case "5": p.fifth(); break;
                     default: Console.WriteLine("Try again. (tasks '1', '2', '3', '5' are available and '0' to exit)"); break;
                 }
-            } while (task != 0);
+            } while (task != "0");
 
         }
         public void first()
